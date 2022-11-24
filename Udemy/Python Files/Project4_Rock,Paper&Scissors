@@ -46,7 +46,7 @@ elif choose == 2 :
 
 print("Computer Choose")
 
-com_Choose = random.randrange(0,3,1)
+com_Choose = random.randint(0,2)
 
 if com_Choose == 0 :
     print(Rock)
