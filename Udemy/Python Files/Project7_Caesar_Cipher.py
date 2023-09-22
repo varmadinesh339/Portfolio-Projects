@@ -10,25 +10,13 @@ text = input("Please type the message :\n")
 text = text.lower()
 shift = int(input("Please enter the shift number:\n"))
 
-
-
-
-
-def encode(plain_text,shift_amount):
+def code(input_text,shift_amount,ciper_direction):
     result = ""
-    for i in plain_text:
-        new_index = alpha.index(i) + shift_amount
-        result += alpha[new_index]
-    print(f"THe encoded message is {result}")
+    if ciper_direction  == 'decode':
+        shift_amount *= -1
+    for i in input_text :
+       result += alpha[alpha.index(i)+ shift_amount]
 
-def decode(plain_text,shift_amount):
-    result = ""
-    for i in plain_text:
-        new_index = alpha.index(i) - shift_amount
-        result += alpha[new_index]
-    print(f"THe encoded message is {result}")
+    print(f'The {ciper_direction}d code is {result}') 
 
-if choice == 'encode':
-    encode(text,shift)
-elif choice == 'decode':
-    decode(text,shift)
+code(input_text=text,shift_amount=shift,ciper_direction=choice)
