@@ -10,6 +10,7 @@ text = input("Please type the message :\n")
 text = text.lower()
 shift = int(input("Please enter the shift number:\n"))
 
+# Converted booth functions from two individual functions
 def code(input_text,shift_amount,ciper_direction):
     result = ""
     if ciper_direction  == 'decode':
